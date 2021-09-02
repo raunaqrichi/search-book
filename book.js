@@ -22,11 +22,13 @@ const searchBook = () =>{
 };
 
 const displayBook = books => {
-     // // books result quantity
-     const booksQuantity = document.getElementById('quantity');
-     const p = document.createElement('p');
-     p.innerText = `Search result found: ${books.numFound}`;
-     booksQuantity.appendChild(p);
+
+    // books result quantity
+    const booksQuantity = document.getElementById('quantity');
+    booksQuantity.textContent = '';
+    const p = document.createElement('p');
+    p.innerText = `Search result found: ${books.length}`;
+    booksQuantity.appendChild(p);
 
 
 
@@ -41,9 +43,8 @@ const displayBook = books => {
  if(books.length === 0){
      error.innerText = 'No Result Found';
  };
-   
+ //    book cards 
     books.forEach(book => {
-        console.log(book);
         const div = document.createElement('div');
         div.classList.add('col');
         div.innerHTML = `
