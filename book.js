@@ -14,7 +14,7 @@ const searchBook = () =>{
     };
     
 
-    const url = ` http://openlibrary.org/search.json?q=${inputFieldText}`;
+    const url = ` https://openlibrary.org/search.json?q=${inputFieldText}`;
     fetch (url)
     .then(res => res.json())
     .then(data => displayBook(data.docs));
@@ -22,17 +22,17 @@ const searchBook = () =>{
 };
 
 const displayBook = books => {
-    const searchResult = document.getElementById('search-result');
-    searchResult.textContent = '';
-
      // // books result quantity
      const booksQuantity = document.getElementById('quantity');
      const p = document.createElement('p');
-     p.innerText = `Search result found: ${books.num_Found}`;
+     p.innerText = `Search result found: ${books.numFound}`;
      booksQuantity.appendChild(p);
- 
- 
 
+
+
+    const searchResult = document.getElementById('search-result');
+    searchResult.textContent = '';
+ 
 
  // error
  const error = document.getElementById('errors');
@@ -43,7 +43,7 @@ const displayBook = books => {
  };
    
     books.forEach(book => {
-        // console.log(book);
+        console.log(book);
         const div = document.createElement('div');
         div.classList.add('col');
         div.innerHTML = `
