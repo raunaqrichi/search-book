@@ -51,10 +51,10 @@ const displayBook = books => {
         <div class="card">
             <img id='pic-id'  src="https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg" class="card-img-top" alt="...">
             <div class="card-body">
-                <h5 class="card-title">${book.title}</h5>
-                <p class="card-text">Author Name: ${book.author_name}</p>
-                <p class="card-text">Publisher Name: ${book.publisher}</p>
-                <p class="card-text">First Publish Year: ${book.first_publish_year}</p>
+                <h3 class="card-title">${book.title}</h3>
+                <p class="card-text"><strong>Author Name:</strong> ${book.author_name}</p>
+                <p class="card-text"><strong>Publisher Name:</strong> ${book.publisher}</p>
+                <p class="card-text"><strong>First Publish Year:</strong> ${book.first_publish_year}</p>
             </div>
         </div>
     
