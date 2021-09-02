@@ -26,9 +26,9 @@ const displayBook = books => {
     // books result quantity
     const booksQuantity = document.getElementById('quantity');
     booksQuantity.textContent = '';
-    const p = document.createElement('p');
-    p.innerText = `Search result found: ${books.length}`;
-    booksQuantity.appendChild(p);
+    const h1 = document.createElement('h1');
+    h1.innerText = `Search result found: ${books.length}`;
+    booksQuantity.appendChild(h1);
 
 
 
@@ -52,9 +52,9 @@ const displayBook = books => {
             <img id='pic-id'  src="https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">${book.title}</h5>
-                <p class="card-text">${book.author_name}</p>
-                <p class="card-text">${book.publisher}</p>
-                <p class="card-text">${book.first_publish_year}</p>
+                <p class="card-text">Author Name: ${book.author_name}</p>
+                <p class="card-text">Publisher Name: ${book.publisher}</p>
+                <p class="card-text">First Publish Year: ${book.first_publish_year}</p>
             </div>
         </div>
     
